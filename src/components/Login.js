@@ -69,6 +69,8 @@ const StyledLogin = styled.div`
         height:40px;
         margin-bottom:10px;
         padding-left:1%;
+        border-radius:5px;
+        border: 1px solid grey;
     }
     button{
         width: 300px;
@@ -77,6 +79,11 @@ const StyledLogin = styled.div`
         margin-top:20px;
         font-size:20px;
         font-weight:600;
-        
+        border-radius:5px;
+        border: 1px solid grey;
+
+    }
+    a{
+        text-decoration:none;
     }
 `
