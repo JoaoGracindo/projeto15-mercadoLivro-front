@@ -1,11 +1,14 @@
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import axios from "axios";
+
+import authContext from '../authContext.js'
 
 export default function Login(){
 
     const navigate = useNavigate();
+    const {setToken} = useContext(authContext)
 
     const [form, setForm] = useState({
         email: '',
@@ -23,10 +26,11 @@ export default function Login(){
         e.preventDefault();
 
         try{
-            await axios.post(process.env.REACT_APP_API_URL, form);
+            const promise = await axios.post(process.env.REACT_APP_API_URL, form);
+            setToken(promise);
 
         }catch(err){
-            return alert(err)
+            return alert(err);
         }
         navigate('/produtos');
     }
