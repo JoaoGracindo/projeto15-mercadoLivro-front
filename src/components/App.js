@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import UserContext from '../authContext';
 import SignUp from './SignUp';
+import Login from './Login';
 
 const [token, setToken] = useState('');
 
@@ -13,6 +14,7 @@ function App() {
         <GlobalStyle/>
         <Routes>
           <Route path='/sign-up' element={SignUp}/>
+          <Route path='/' element={Login}/>
         </Routes>
       </UserContext.Provider>
     </BrowserRouter>
