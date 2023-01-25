@@ -34,7 +34,7 @@ export default function SignUp(){
     }
 
     return(
-        <>
+        <StyledSignUp>
             <form onSubmit={submitForm}>
                 <input
                     type='name'
@@ -65,10 +65,32 @@ export default function SignUp(){
                 </button>
                 <Link to='/'>Já tem cadastro? Faça login.</Link>
             </form>
-        </>
+        </StyledSignUp>
     )
 }
 
 const StyledSignUp = styled.div`
+margin: auto;
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top:120px;
+}
+input{
+    width: 300px;
+    height:40px;
+    margin-bottom:10px;
+    padding-left:1%;
+}
+button{
+    width: 300px;
+    height:40px;
+    margin-bottom:10px;
+    margin-top:20px;
+    font-size:20px;
+    font-weight:600;
     
+}
 `
