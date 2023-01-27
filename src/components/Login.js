@@ -27,12 +27,13 @@ export default function Login(){
 
         try{
             const promise = await axios.post(process.env.REACT_APP_API_URL, form);
+            console.log(promise.data)
             setToken(promise);
-
+            
         }catch(err){
             return alert(err);
         }
-        navigate('/produtos');
+        navigate('/shopping-cart');
     }
 
     return(

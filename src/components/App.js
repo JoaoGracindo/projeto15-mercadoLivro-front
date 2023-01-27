@@ -5,6 +5,7 @@ import UserContext from '../authContext';
 import SignUp from './SignUp';
 import Login from './Login';
 import { useState } from 'react';
+import ShoppingCartPage from './ShoppingCartPage';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path='/sign-up' element={<SignUp/>}/>
           <Route path='/' element={<Login/>}/>
+          <Route path='/shopping-cart' element={<ShoppingCartPage token={token}/>}/>
         </Routes>
       </UserContext.Provider>
     </BrowserRouter>
